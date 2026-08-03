@@ -10,6 +10,16 @@ This project is ideal for PPT-based teaching, classroom demonstrations, and hand
 
 ---
 
+## 🚀 Live Demo
+
+The project is fully deployed and live on Render. You can try all five AI features right now:
+
+**Live Link:** https://ai-toolkit-web.onrender.com
+
+Simply open the link in your browser and start using the AI features. No local setup required to see it in action!
+
+---
+
 ## Why this project exists
 
 The goal of this repository is to make AI API integration easy to understand for students and beginners.
@@ -215,7 +225,65 @@ Example request body for summarization:
 
 ---
 
-## Notes for teaching and learning
+## Application Screenshots
+
+### Dashboard – AI Workflows Overview
+The main dashboard displays all five AI-powered tools in an organized grid. Each tool card shows the feature name, description, and a link to launch the workflow.
+
+**Features visible:**
+- Summarize Text
+- Explain Code
+- Improve Writing
+- Generate Email
+- Interview Questions
+
+### Feature Pages – Live AI Generation
+Each feature page provides a clean interface for users to input content and generate AI responses. The application shows:
+
+- Input field with placeholder text
+- Generate button
+- Real-time loading state
+- AI-generated output displayed clearly
+- Error handling with user-friendly messages
+- Success feedback
+
+The interface is responsive and works seamlessly on desktop and mobile devices.
+
+---
+
+## Deployment Information
+
+This project is deployed live on **Render**, a modern cloud platform for hosting full-stack web applications.
+
+### Deployment Architecture
+
+- **Frontend:** Hosted as a static site on Render
+- **Backend:** Node.js Express server running on Render
+- **API:** Both frontend and backend communicate over HTTPS
+
+### How Deployment Works
+
+When a user visits the live link:
+
+1. React frontend loads from Render's CDN
+2. User interacts with the application
+3. Frontend makes API calls to the backend (also on Render)
+4. Backend receives requests, validates input, and calls Gemini API
+5. Gemini processes the prompt and returns generated content
+6. Backend sends response back to frontend
+7. React displays the result to the user
+
+All communication is encrypted and secure.
+
+### Live Application URL
+
+```
+https://ai-toolkit-web.onrender.com
+```
+
+You can visit this link anytime to try the application without any local setup.
+
+---
 
 This project is intentionally simple and focused on the core concepts of AI integration.
 
@@ -243,14 +311,29 @@ The focus remains on teaching the important building blocks:
 
 This repository is a good fit for classroom teaching because it shows a real end-to-end example without overwhelming the learner with extra complexity.
 
+### For live demonstrations
+You can use the **live deployed version** (https://ai-toolkit-web.onrender.com) during PPT presentations without requiring local setup. Simply open the link and demonstrate each AI feature in real-time.
+
+### For local teaching
+Clone the repository and walk through the code step-by-step. Show students:
+
+1. The Express server setup and route configuration
+2. How Gemini API key is securely stored in `.env`
+3. The prompt template builders in the `prompts/` folder
+4. The `aiService.js` that calls Gemini
+5. The React components that fetch data from the backend
+6. How the AI response is displayed in the frontend
+
 A typical teaching flow would be:
 
-1. Introduce the idea of AI APIs
-2. Show the frontend request flow
-3. Explain the Express backend architecture
-4. Demonstrate prompt construction
-5. Show how Gemini responds
-6. Display the output in the frontend
+1. Show the live demo of the application in action
+2. Explain the architecture (React frontend → Express backend → Gemini API)
+3. Walk through the Express route setup
+4. Show the Gemini client configuration
+5. Demonstrate how prompts are built for each feature
+6. Explain the frontend API calls using Axios
+7. Show how responses are displayed in the UI
+8. Let students run the project locally and experiment
 
 ---
 
@@ -259,3 +342,5 @@ A typical teaching flow would be:
 AI Toolkit is a practical teaching project that helps learners understand how a modern AI-powered application is built from the ground up using Node.js and React.
 
 It is simple, educational, and aligned with common PPT explanations of AI API integration.
+
+**The project is currently deployed and live at:** https://ai-toolkit-web.onrender.com
